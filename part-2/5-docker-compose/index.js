@@ -4,9 +4,9 @@ const mongoose = require('mongoose');
 const app = express();
 const port = 3000;
 
+console.log("hi from the backend application");
 // Set up mongoose connection
-mongoose.connect(process.env.MONGO_URI, {});
-console.log(process.env.MONGO_URI)
+mongoose.connect("mongodb://mongodb/testdb", {});
 
 const EntrySchema = new mongoose.Schema({
   text: String,
