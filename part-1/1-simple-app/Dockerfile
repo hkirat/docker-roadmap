@@ -16,6 +16,3 @@ COPY --chown=node:node ./src .
 EXPOSE 3000
 
 CMD ["node", "index.js"]
-
-
-
