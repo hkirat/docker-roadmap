@@ -1,10 +1,10 @@
-FROM node:20
+FROM node:20-alpine
 
 WORKDIR /usr/src/app
 
-COPY . .
+ONBUILD RUN npm install
 
-RUN npm install
+COPY . .
 
 EXPOSE 3000
 
