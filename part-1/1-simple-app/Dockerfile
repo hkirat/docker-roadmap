@@ -2,7 +2,9 @@ FROM node:20-alpine
 
 WORKDIR /usr/src/app
 
-ONBUILD RUN npm install
+COPY package* .
+
+RUN npm install
 
 COPY . .
 
