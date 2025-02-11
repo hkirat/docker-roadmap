@@ -6,7 +6,7 @@ const port = 3000;
 
 console.log("hi from the backend application");
 // Set up mongoose connection
-mongoose.connect("mongodb://mongodb/testdb", {});
+mongoose.connect("mongodb://mongodbi_db:27017/testdb", {});
 
 const EntrySchema = new mongoose.Schema({
   text: String,
