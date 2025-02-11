@@ -9,6 +9,11 @@ services:
     build: ./
     ports:
       - "3000:3000"
+    depends_on:
+      - mongodbi_db  # Ensures MongoDB starts before your app
+    environment:
+      - MONGO_URI=mongodb://mongodbi_db:27017/testdb
+
 
 volumes:
   mongodb-data:
